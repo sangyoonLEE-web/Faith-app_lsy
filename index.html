@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주님 곁에 — 감정별 신앙 큐레이션</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="bg-wrap"><div class="bg-cross"></div></div>
+
+    <header>
+      <p class="site-label">✦ Faith &amp; Soul ✦</p>
+      <h1 style="color: #1a1410">
+        지금 이 마음에<br /><span style="color: #1a1410"
+          >주님이 함께하십니다</span
+        >
+      </h1>
+      <p class="header-desc">
+        지금 느끼는 감정을 선택하세요.<br />하나님의 말씀과 찬양, 기도문등이
+        준비되어있습니다.
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- EMOTION SELECTOR -->
+      <div class="divider"><span>지금 마음이 어떠신가요?</span></div>
+      <section class="emotion-section" id="emotion-selector">
+        <button class="emotion-btn" onclick="showContent('sad')">
+          <span class="emotion-icon"><img src="images/sad.png" alt="" /></span>
+          <span class="emotion-label">우울할때</span>
+          <span class="emotion-verse">시 34:18</span>
+        </button>
+        <button class="emotion-btn" onclick="showContent('anxious')">
+          <span class="emotion-icon"
+            ><img src="images/anxiety.png" alt=""
+          /></span>
+          <span class="emotion-label">불안할때</span>
+          <span class="emotion-verse">빌 4:6</span>
+        </button>
+        <button class="emotion-btn" onclick="showContent('lonely')">
+          <span class="emotion-icon"
+            ><img src="images/loney.png" alt=""
+          /></span>
+          <span class="emotion-label">외로울때</span>
+          <span class="emotion-verse">신 31:8</span>
+        </button>
+
+        <button class="emotion-btn" onclick="showContent('confused')">
+          <span class="emotion-icon"><img src="images/fear.png" alt="" /></span>
+          <span class="emotion-label">두려울때</span>
+          <span class="emotion-verse">잠 3:5</span>
+        </button>
+      </section>
+
+      <div id="content-area"></div>
+    </main>
+
+    <footer>
+      <p>
+        © 2026 주님 곁에 — 이 페이지의 모든 성경 말씀은 개역개정 기준입니다
+        <br />
+        영상 링크는 YouTube로 연결됩니다 · 실제 서비스 시 저작권 확인 필요
+      </p>
+
+      <div>
+        <p>대한예수교장로회</p>
+        <img src="images/dom_logo.webp" alt="교단마크" />
+      </div>
+    </footer>
+    <!-- 자바 스크립트 -->
+    <script src="js/main.js"></script>
+    <script>
+      const data = {
+        // 우울할때
+        sad: {
+          emoji:
+            '<img class="panel-emoji" src="images/sad.png" alt="슬픔" />' /* 1 */,
+          title: "우울할때",
+          sub: "마음이 찢어지는 것 같은 그 자리에도 주님이 계십니다",
+          color: "#5C7A9A",
+          bible: [
+            {
+              ref: "로마서 8:28",
+              text: "28 우리가 알거니와 하나님을 사랑하는 자 곧 그의 뜻대로 부르심을 입은 자들에게는 모든 것이 합력하여 선을 이루느니라",
+            },
+            {
+              ref: "요한복음 16:33",
+              text: "33 이것을 너희에게 이르는 것은 너희로 내 안에서 평안을 누리게 하려 함이라 세상에서는 너희가 환난을 당하나 담대하라 내가 세상을 이기었노라",
+            },
+            {
+              ref: "히브리서 12:2",
+              text: `2 믿음의 주요 또 온전하게 하시는 이인 예수를 바라보자 그는 그 앞에 있는 기쁨을 위하여 십자가를 참으사 부끄러움을 개의치 아니하시더니
+                    하나님 보좌 우편에 앉으셨느니라 `,
+            },
+            {
+              ref: "야고보서 1:2-4",
+              text: `2 내 형제들아 너희가 여러 가지 시험을 당하거든 온전히 기쁘게 여기라
+                    <br>
+                    3 이는 너희 믿음의 시련이 인내를 만들어 내는 줄 너희가 앎이라<br>
+                    4 인내를 온전히 이루라 이는 너희로 온전하고 구비하여 조금도 부족함이 없게 하려 함이라
+                    `,
+            },
+          ],
+          praise: [
+            {
+              title: "은혜",
+              artist: "손경민",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=pZuW2CV0mXY",
+            },
+            {
+              title: "십자가 그 사랑",
+              artist: "마커스",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=Ivp6Tb3pc24",
+            },
+            {
+              title: "그 사랑",
+              artist: "F.I.A",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=sk_ACKNjq_o",
+            },
+          ],
+          testimony: [
+            {
+              title: "사랑하는 이를 잃고 주님 안에서 위로받은 간증",
+              artist: "간증 나눔",
+              tag: "간증",
+              url: "https://www.youtube.com/results?search_query=사별+슬픔+위로+간증+기독교",
+            },
+            {
+              title: "이혼 후 하나님이 회복시켜주신 이야기",
+              artist: "생명의 말씀",
+              tag: "간증",
+              url: "https://www.youtube.com/results?search_query=이혼+회복+하나님+간증",
+            },
+          ],
+          sermon: [
+            {
+              title: "슬픔을 통과하는 방법 — 설교",
+              artist: "최성은 목사",
+              tag: "설교",
+              url: "https://www.youtube.com/results?search_query=최성은+목사+슬픔+설교",
+            },
+            {
+              title: "눈물의 신학 — 하나님은 우리와 함께 우신다",
+              artist: "송태근 목사",
+              tag: "설교",
+              url: "https://www.youtube.com/results?search_query=송태근+목사+눈물+설교",
+            },
+          ],
+          prayer:
+            "①주님, 어떤 상황에서도 십자가를 바라보며 감사하게 하시고 우울함 속에서도 기쁨과 소망을 잃지 않게 하소서.<br>②하나님, 지금의 상황이 이해되지 않아도 저를 향한 주님의 선하신 뜻을 신뢰하게 하시고 다시 일어날 힘을 주옵소서.<br>③주님, 제 감정이 아니라 진리 위에 서게 하시고 우울함 속에서도 감사와 찬양을 선택할 수 있는 믿음을 주옵소서.",
+        },
+        // 불안할때
+        anxious: {
+          emoji:
+            '<img class="panel-emoji" src="images/anxiety.png" alt="불안" />',
+          title: "불안할때",
+          sub: "염려를 주님께 올려드리세요",
+          color: "#7A5C9A",
+          bible: [
+            {
+              ref: "잠언 3:5-6",
+              text: "5 너는 마음을 다하여 여호와를 신뢰하고 네 명철을 의지하지 말라<br>6 너는 범사에 그를 인정하라 그리하면 네 길을 지도하시리라",
+            },
+            {
+              ref: "마태복음 6:33-34",
+              text: "33 그런즉 너희는 먼저 그의 나라와 그의 의를 구하라 그리하면 이 모든 것을 너희에게 더하시리라<br>34 그러므로 내일 일을 위하여 염려하지 말라 내일 일은 내일이 염려할 것이요 한 날의 괴로움은 그 날로 족하니라",
+            },
+            {
+              ref: "빌립보서 4:6-7",
+              text: "6 아무 것도 염려하지 말고 다만 모든 일에 기도와 간구로, 너희 구할 것을 감사함으로 하나님께 아뢰라 <br> 7 그리하면 모든 지각에 뛰어난 하나님의 평강이 그리스도 예수 안에서 너희 마음과 생각을 지키시리라",
+            },
+            {
+              ref: "누가복음 17:19",
+              text: "19 그에게 이르시되 일어나 가라 네 믿음이 너를 구원하였느니라 하시더라",
+            },
+          ],
+          praise: [
+            {
+              title: "주가 일하시네",
+              artist: "브라이언킴",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=kwFW0zE80UU",
+            },
+            {
+              title: "주님 다시 오실 때까지",
+              artist: "마커스",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=NtWG05adY2Q",
+            },
+            {
+              title: "오직 주만이",
+              artist: "마커스",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=yPEHz4YP4Ic",
+            },
+          ],
+          testimony: [
+            {
+              title: "공황장애 극복 — 신앙 간증",
+              artist: "크리스천 간증",
+              tag: "간증",
+              url: "https://www.youtube.com/results?search_query=공황장애+신앙+극복+간증",
+            },
+            {
+              title: "불안증에서 자유로워진 이야기",
+              artist: "간증 나눔",
+              tag: "간증",
+              url: "https://www.youtube.com/results?search_query=불안증+자유+하나님+간증",
+            },
+          ],
+          sermon: [
+            {
+              title: "걱정을 내려놓는 법 — 설교",
+              artist: "이찬수 목사",
+              tag: "설교",
+              url: "https://www.youtube.com/results?search_query=이찬수+목사+걱정+염려+설교",
+            },
+            {
+              title: "하나님이 통치하신다 — 설교",
+              artist: "김병삼 목사",
+              tag: "설교",
+              url: "https://www.youtube.com/results?search_query=김병삼+목사+하나님+통치+설교",
+            },
+          ],
+          prayer:
+            "①주님, 제 뜻과 계획이 아니라 주님의 뜻을 따르게 하시고 결과를 맡기게 하소서. 조급함이 올 때마다 주님을 신뢰하게 하소서.<br>②하나님, 미래를 붙잡으려는 제 마음을 내려놓습니다. 오늘 주님이 기뻐하시는 선택에 집중하게 하시고 나머지는 주님께 맡기게 하소서.<br>③주님, 제 힘으로 하려는 불안을 내려놓고 은혜로 살게 하소서. 결과가 어떻든 주님이 기뻐하시면 충분하다는 믿음을 주옵소서.",
+        },
+        //외로울때
+        lonely: {
+          emoji:
+            '<img class="panel-emoji" src="images/loney.png" alt="외로움" />',
+          title: "외로울때",
+          sub: "아무도 없는 것 같아도, 주님은 결코 우리를 떠나지 않으십니다",
+          color: "#4A7A7A",
+          bible: [
+            {
+              ref: "신명기 31:6",
+              text: "6 너희는 강하고 담대하라 두려워하지 말라 그들 앞에서 떨지 말라 이는 네 하나님 여호와 그가 너와 함께 가시며 결코 너를 떠나지 아니하시며 버리지 아니하실 것임이라 하고",
+            },
+            {
+              ref: "시편 23:4",
+              text: "4 내가 사망의 음침한 골짜기로 다닐지라도 해를 두려워하지 않을 것은 주께서 나와 함께 하심이라 주의 지팡이와 막대기가 나를 안위하시나이다",
+            },
+            {
+              ref: "이사야 43:2",
+              text: "2 네가 물 가운데로 지날 때에 내가 너와 함께 할 것이라 강을 건널 때에 물이 너를 침몰하지 못할 것이며 네가 불 가운데로 지날 때에 타지도 아니할 것이요 불꽃이 너를 사르지도 못하리니",
+            },
+            {
+              ref: "예레미아 33:8)",
+              text: "8 내가 그들을 내게 범한 그 모든 죄악에서 정하게 하며 그들이 내게 범하며 행한 모든 죄악을 사할 것이라",
+            },
+          ],
+          praise: [
+            {
+              title: "주와 같이 길 가는 것",
+              artist: "F.I.A",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=xL5XocOa49I",
+            },
+            {
+              title: "좋으신 하나님",
+              artist: "호연하다",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=bAKe4C3JGMU",
+            },
+            {
+              title: "예수 늘 함께하시네",
+              artist: "찬양",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=4v0oHeJ8-2k",
+            },
+          ],
+          testimony: [
+            {
+              title: "극심한 고독 속에서 하나님을 발견한 이야기",
+              artist: "간증",
+              tag: "간증",
+              url: "https://www.youtube.com/results?search_query=고독+하나님+발견+간증",
+            },
+            {
+              title: "혼자인 줄 알았는데 — 외로움 간증",
+              artist: "크리스천 간증",
+              tag: "간증",
+              url: "https://www.youtube.com/results?search_query=외로움+간증+크리스천",
+            },
+          ],
+          sermon: [
+            {
+              title: "혼자라고 느낄 때 — 설교",
+              artist: "박성진 목사",
+              tag: "설교",
+              url: "https://www.youtube.com/results?search_query=혼자라고+느낄때+목사+설교",
+            },
+            {
+              title: "임마누엘 — 하나님이 우리와 함께 하심",
+              artist: "정은실 목사",
+              tag: "설교",
+              url: "https://www.youtube.com/results?search_query=임마누엘+하나님+함께+설교",
+            },
+          ],
+          prayer: `①주님, 혼자인 것 같을 때에도 함께하심을 믿게 하시고 사람보다 주님을 의지하게 하소서. 모든 관계를 주님께 맡깁니다.<br>②하나님, 사람을 붙이시고 떼시는 분이 주님이심을 믿습니다. 제게 가장 좋은 때에 가장 좋은 사람을 허락해 주옵소서.<br>③주님, 외로움 속에서도 주님과 더 깊이 교제하게 하시고 혼자 있는 시간이 은혜의 시간이 되게 하소서.
+      `,
+        },
+
+        //두려울때
+        confused: {
+          emoji:
+            '<img class="panel-emoji" src="images/fear.png" alt="두려움" />',
+          title: "두려울때",
+          sub: "인생의 갈림길에서 하나님의 지혜를 구하세요",
+          color: "#5C6B7A",
+          bible: [
+            {
+              ref: "이사야 41:10",
+              text: "10 두려워하지 말라 내가 너와 함께 함이라 놀라지 말라 나는 네 하나님이 됨이라 내가 너를 굳세게 하리라 참으로 너를 도와 주리라 참으로 나의 의로운 오른손으로 너를 붙들리라",
+            },
+            {
+              ref: "갈라디아서 1:10",
+              text: "10 이제 내가 사람들에게 좋게 하랴 하나님께 좋게 하랴 사람들에게 기쁨을 구하랴 내가 지금까지 사람들의 기쁨을 구하였다면 그리스도의 종이 아니니라",
+            },
+            {
+              ref: "사무엘하 6:21-22",
+              text: `21 다윗이 미갈에게 이르되 이는 여호와 앞에서 한 것이니라 그가 네 아버지와 그의 온 집을 버리시고 나를 택하사 나를 여호와의 백성 이스라엘의 주권자로 삼으셨으니 내가 여호와 앞에서 뛰놀리라<br>22 내가 이보다 더 낮아져서 스스로 천하게 보일지라도 네가 말한 바 계집종에게는 내가 높임을 받으리라 한지라`,
+            },
+            {
+              ref: "여호수아 1:9",
+              text: `9 내가 네게 명령한 것이 아니냐 강하고 담대하라 두려워하지 말며 놀라지 말라 네가 어디로 가든지 네 하나님 여호와가 너와 함께 하느니라 하시니라`,
+            },
+          ],
+          praise: [
+            {
+              title: "Way maker",
+              artist: "마커스",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=W9JMKBH6HQU",
+            },
+            {
+              title: "나는 믿네",
+              artist: "F.I.A",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=Qek0xGCTCIc",
+            },
+            {
+              title: "주 이름 찬양",
+              artist: "F.I.A",
+              tag: "찬양",
+              url: "https://www.youtube.com/watch?v=xITJZa0hpu0",
+            },
+          ],
+          testimony: [
+            {
+              title: "진로 선택 앞에서 하나님께 구한 이야기",
+              artist: "진로 간증",
+              tag: "간증",
+              url: "https://www.youtube.com/results?search_query=진로+하나님+인도+간증",
+            },
+            {
+              title: "방황 끝에 하나님의 뜻을 발견한 간증",
+              artist: "간증 나눔",
+              tag: "간증",
+              url: "https://www.youtube.com/results?search_query=방황+하나님+뜻+발견+간증",
+            },
+          ],
+          sermon: [
+            {
+              title: "하나님의 뜻을 어떻게 알 수 있는가 — 설교",
+              artist: "이찬수 목사",
+              tag: "설교",
+              url: "https://www.youtube.com/results?search_query=이찬수+목사+하나님의뜻+설교",
+            },
+            {
+              title: "결정의 순간, 하나님께 구하라 — 설교",
+              artist: "류응렬 목사",
+              tag: "설교",
+              url: "https://www.youtube.com/results?search_query=류응렬+목사+결정+하나님+설교",
+            },
+          ],
+          prayer: `①하나님, 사람의 시선이 아니라 주님만 바라보게 하시고 담대함으로 나아가게 하소서. 사람보다 하나님을 더 두려워하게 하소서.<br>②주님, 시작도 하기 전에 두려워하지 않게 하시고 주님이 허락하신 길이라면 담대히 나아가게 하소서.<br>③하나님, 사람의 평가에서 자유하게 하시고 오직 주님을 기쁘시게 하는 삶을 선택할 용기를 주옵소서.`,
+        },
+      };
+
+      let currentTab = "bible1";
+
+      function showContent(key) {
+        document
+          .querySelectorAll(".emotion-btn")
+          .forEach((b) => b.classList.remove("active"));
+        event.currentTarget.classList.add("active");
+        const d = data[key];
+        const area = document.getElementById("content-area");
+        area.innerHTML = `
+              <div class="content-panel visible" id="panel-${key}">
+                <button class="back-btn" onclick="goBack()">← 다시 선택하기</button>
+                <div class="panel-header">
+                  <div class="panel-title">${d.emoji} ${d.title}</div>
+                  <div class="panel-subtitle">${d.sub}</div>
+                </div>
+                <div class="tab-bar">
+                  <button class="tab-btn active" onclick="switchTab('bible','${key}',this)">📖 성경 말씀</button>
+                  <button class="tab-btn" onclick="switchTab('praise','${key}',this)">🎵 찬양</button>
+                  <button class="tab-btn" onclick="switchTab('testimony','${key}',this)">🙌 간증 영상</button>
+                  <button class="tab-btn" onclick="switchTab('sermon','${key}',this)">📺 목사님 말씀</button>
+                  <button class="tab-btn" onclick="switchTab('prayer','${key}',this)">🕊 기도문</button>
+                </div>
+                <div class="tab-content active" id="tab-bible-${key}">
+                  ${d.bible
+                    .map(
+                      (b) => `
+                    <div class="bible-card">
+                      <div class="bible-reference">${b.ref}</div>
+                      <div class="bible-text">${b.text}</div>
+                    </div>
+                  `,
+                    )
+                    .join("")}
+                </div>
+                <div class="tab-content" id="tab-praise-${key}">
+                  <div class="media-grid">${d.praise.map((m) => makeCard(m)).join("")}</div>
+                </div>
+                <div class="tab-content" id="tab-testimony-${key}">
+                  <div class="media-grid">${d.testimony.map((m) => makeCard(m)).join("")}</div>
+                </div>
+                <div class="tab-content" id="tab-sermon-${key}">
+                  <div class="media-grid">${d.sermon.map((m) => makeCard(m)).join("")}</div>
+                </div>
+                <div class="tab-content" id="tab-prayer-${key}">
+                  <div class="prayer-card">${d.prayer}</div>
+                </div>
+              </div>
+            `;
+        area.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function makeCard(m) {
+        return `
+              <a class="media-card" href="${m.url}" target="_blank" rel="noopener">
+                <div class="media-thumb">
+                  <div class="thumb-gradient"></div>
+                  <div class="play-icon">▶</div>
+                  <div class="thumb-label">${m.tag}</div>
+                </div>
+                <div class="media-info">
+                  <h3>${m.title}</h3>
+                  <p>${m.artist}</p>
+                </div>
+                <div class="yt-link-bar">▶ YouTube에서 검색하기</div>
+              </a>
+            `;
+      }
+
+      function switchTab(tab, key, el) {
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((c) => c.classList.remove("active"));
+        el.classList.add("active");
+        document.getElementById(`tab-${tab}-${key}`).classList.add("active");
+      }
+
+      function goBack() {
+        document.getElementById("content-area").innerHTML = "";
+        document
+          .querySelectorAll(".emotion-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document
+          .getElementById("emotion-selector")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
