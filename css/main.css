@@ -148,7 +148,7 @@ h1 span {
   background: rgba(255, 255, 255, 0.04);
   border: 0.5px solid rgba(201, 168, 76, 0.25);
   border-radius: var(--radius);
-  padding: 1.2rem 0.75rem;
+  padding: 1.8rem 0.95rem;
   cursor: pointer;
   text-align: center;
   transition: all 0.25s ease;
@@ -438,11 +438,16 @@ h1 span {
 footer {
   text-align: center;
   padding: 3rem 1.5rem;
-  color: #4a3c2c;
+  color: #a7a098;
   font-size: 0.8rem;
   line-height: 2;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3d2b1f;
+  max-width: 1100px;
+  margin: auto;
+
 }
 footer span {
   color: var(--gold-dim);

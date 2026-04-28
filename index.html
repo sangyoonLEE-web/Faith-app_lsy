@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>주님 곁에 — 감정별 신앙 큐레이션</title>
+    <!-- 파비콘 -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/shem_logo.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="images/shem_logo.png" />
+    <link rel="shortcut icon" href="images/shem_logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap"
@@ -32,27 +44,31 @@
       <div class="divider"><span>지금 마음이 어떠신가요?</span></div>
       <section class="emotion-section" id="emotion-selector">
         <button class="emotion-btn" onclick="showContent('sad')">
-          <span class="emotion-icon"><img src="images/sad.png" alt="" /></span>
+          <span class="emotion-icon"
+            ><img src="images/sad.png" alt="이모티콘"
+          /></span>
           <span class="emotion-label">우울할때</span>
           <span class="emotion-verse">시 34:18</span>
         </button>
         <button class="emotion-btn" onclick="showContent('anxious')">
           <span class="emotion-icon"
-            ><img src="images/anxiety.png" alt=""
+            ><img src="images/asd.png" alt="이모티콘"
           /></span>
           <span class="emotion-label">불안할때</span>
           <span class="emotion-verse">빌 4:6</span>
         </button>
         <button class="emotion-btn" onclick="showContent('lonely')">
           <span class="emotion-icon"
-            ><img src="images/loney.png" alt=""
+            ><img src="images/loney.png" alt="이모티콘"
           /></span>
           <span class="emotion-label">외로울때</span>
           <span class="emotion-verse">신 31:8</span>
         </button>
 
         <button class="emotion-btn" onclick="showContent('confused')">
-          <span class="emotion-icon"><img src="images/fear.png" alt="" /></span>
+          <span class="emotion-icon"
+            ><img src="images/apear.png" alt="이모티콘"
+          /></span>
           <span class="emotion-label">두려울때</span>
           <span class="emotion-verse">잠 3:5</span>
         </button>
@@ -160,8 +176,7 @@
         },
         // 불안할때
         anxious: {
-          emoji:
-            '<img class="panel-emoji" src="images/anxiety.png" alt="불안" />',
+          emoji: '<img class="panel-emoji" src="images/asd.png" alt="불안" />',
           title: "불안할때",
           sub: "염려를 주님께 올려드리세요",
           color: "#7A5C9A",
@@ -314,7 +329,7 @@
         //두려울때
         confused: {
           emoji:
-            '<img class="panel-emoji" src="images/fear.png" alt="두려움" />',
+            '<img class="panel-emoji" src="images/apear.png" alt="두려움" />',
           title: "두려울때",
           sub: "인생의 갈림길에서 하나님의 지혜를 구하세요",
           color: "#5C6B7A",
