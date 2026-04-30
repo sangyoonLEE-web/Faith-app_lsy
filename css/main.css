@@ -71,7 +71,7 @@ header {
   padding: clamp(3rem, 8vw, 5rem) 1.5rem clamp(2rem, 5vw, 3rem);
 }
 
-header .shem_logo{
+header .shem_logo {
   width: 50px;
   height: 32px;
 }
@@ -412,7 +412,7 @@ h1 span {
   padding: 1.75rem;
   font-family: "Noto Serif KR", serif;
   font-size: clamp(0.92rem, 2.5vw, 1.05rem);
-  color: #d4c4b0;
+  color: #a99172;
   line-height: 2.1;
   font-weight: 300;
   font-style: italic;
@@ -452,7 +452,7 @@ footer {
   text-align: center;
   padding: 3rem 1.5rem;
   color: #a7a098;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 2;
   display: flex;
   justify-content: space-between;
@@ -460,8 +460,13 @@ footer {
   background-color: #3d2b1f;
   max-width: 1100px;
   margin: auto;
-
 }
+
+.gyodan {
+  width: 80px;
+  height: 120px;
+}
+
 footer span {
   color: var(--gold-dim);
 }
