@@ -44,8 +44,7 @@ body {
   ); */
 }
 .bg-cross {
-  display: fixed;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -509,5 +508,15 @@ footer > div > p {
 @media (min-width: 1024px) {
   .emotion-grid {
     grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  footer p {
+    font-size: 0.5rem;
+  }
+  footer .gyodan {
+    width: 40px;
+    height: 60px;
   }
 }
